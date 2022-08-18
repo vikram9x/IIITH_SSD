@@ -1,0 +1,1 @@
+SELECT CONCAT(Fname, " ", Minit, " ", Lname) AS Full_Name, ssn, Dno, Number_of_Employees FROM EMPLOYEE INNER JOIN (SELECT super_ssn, COUNT(ssn) AS Number_of_Employees FROM EMPLOYEE GROUP BY super_ssn) AS Tmp ON EMPLOYEE.ssn = Tmp.super_ssn ORDER BY Number_of_Employees;

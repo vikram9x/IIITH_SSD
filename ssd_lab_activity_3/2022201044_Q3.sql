@@ -1,0 +1,1 @@
+SELECT mgr_ssn, COUNT(Pno) AS Number_of_Project FROM DEPARTMENT INNER JOIN WORKS_ON ON DEPARTMENT.mgr_ssn = WORKS_ON.Essn WHERE Dnumber in (SELECT Dnum FROM PROJECT WHERE Pname = "ProductY");
