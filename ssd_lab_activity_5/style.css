@@ -1,0 +1,47 @@
+body
+{
+    background-image: linear-gradientv(red,white,black);
+}
+
+h1
+{
+    text-align: center;
+}
+
+#logindiv
+{
+    margin-left:25%;
+    margin-right:25%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display:block;
+    text-align: center;
+    background-color:cadetblue;
+}
+
+#input-record
+{
+    margin:auto;
+    width: 50%;
+    text-align: center;
+}
+
+#add
+{
+    background-color: green;
+}
+
+#del
+{
+    margin-left: 50%;
+    text-align: center;
+    background-color: red;
+}
+table
+{
+    margin-left:auto;
+    margin-right: auto;
+    border: 1px solid;
+    width: 50%;
+    text-align: center;
+}

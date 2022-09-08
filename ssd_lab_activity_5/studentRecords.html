@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Student Records Page
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function addRow()
+            {
+                var rn=document.getElementById("rno").value;
+                var name=document.getElementById("sname").value;
+                var s_table=document.getElementById("tb");
+                var new_row=s_table.insertRow();
+                var c1=new_row.insertCell(0);
+                var c2=new_row.insertCell(1);
+                c1.innerHTML=rn;
+                c2.innerHTML=name;
+                document.getElementById("rno").value='';
+                document.getElementById("sname").value='';
+            }
+            function delLastRow()
+            {
+                var s_table=document.getElementById("tb");
+                var rows=s_table.rows.length;
+                if( rows > 1 )
+                    s_table.deleteRow(-1);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Student Records
+        </h1>
+        <div id="input-record">
+            <input type="text" id="rno" placeholder="Roll No." minlength="1">
+            <input type="text" id="sname" placeholder="Student Name" minlength="1">
+            <button type="submit" id="add" name="add-entry" onclick="addRow()">
+                <strong>Add New</strong>
+            </button>
+        </div>
+        <br><br>
+        <table id="tb">
+            <tr>
+                <th>Roll No.</th>
+                <th>Student Name</th>
+            </tr>
+        </table>
+        <br><br>
+        <button type="submit" id="del" name="del-entry" onclick="delLastRow()">
+            <strong>Delete Last Record</strong>
+        </button>
+    </body>
+</html>
