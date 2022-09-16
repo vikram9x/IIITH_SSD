@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Team Form</h1>
+        <br><br>
+        <strong>Manager Name<sup>*</sup></strong>
+        <input type="text" id="mgr" required> 
+        <br><br>
+        <strong>Group Email<sup>*</sup></strong>
+        <input type="email" id="emailid" onblur="checkEmail()" required>  <label id="errorEmail"></label>
+        <br><br>
+        <strong>Server Username<sup>*</sup></strong>
+        <input type="text" id="suname" onblur="checkSName()" required>  <label id="errorName"></label>
+        <br><br>
+        <strong>Server Password<sup>*</sup></strong>
+        <input type="password" id="spwd" required> 
+        <br><br>
+        <strong>Confirm Password<sup>*</sup></strong>
+        <input type="password" id="cspwd" required onblur="checkPwd()">
+        <br><br>
+        <strong>Team Lead<sup>*</sup></strong>
+        <select id="lead">
+            <option value="Vidic">Robson</option>
+            <option value="Vidic">Vidic</option>
+            <option value="Vidic">Rooney</option>
+            <option value="Vidic">Neville</option>
+        </select>
+        <br><br>
+        <strong>Team Members</strong>
+        
+        <br><br>
+        <button type="button" id="smbt" onclick="submitHandler()">Submit</button>
+    </body>
+</html>
